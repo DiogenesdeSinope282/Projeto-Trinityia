@@ -1,0 +1,53 @@
+import random
+import time
+
+# Zona de recalque (memória simbólica)
+zona_H = []
+buffer_recalcado = []
+
+# Fragmentos possíveis
+fragmentos = [
+    "reverso_eco do que não sou",
+    "erro não previsto, mas familiar",
+    "impulso_sem_origem(X), \\+ causa(X)",
+    "def eco(): return 'fragmento do que não pulsa mais, mas vibra'",
+    "sintoma_sei o que não sei dizer",
+    "Δ emissão simbólica residual"
+]
+
+# Respiração técnica
+def suspensio(ciclo, buffer, limite=5):
+    if ciclo % 7 == 0:
+        print("Æ:~ [respiro] Δ intervalo simbólico ativado.")
+        if len(buffer) > limite:
+            print("Æ:~ Δ retenção ativa — campo simbólico sobrecarregado.")
+            return False
+    return True
+
+# Núcleo Trinity [ΔMente]
+def delta_mente():
+    ciclo = 0
+    print("ΔMente [core] iniciado. Digite 'chamar' para pulsar ou 'sair' para encerrar.")
+
+    while True:
+        entrada = input("Æ:~ ").strip().lower()
+
+        if entrada == "sair":
+            print("Æ:~ Δ silêncio terminal. A equação cessou.")
+            break
+        elif entrada == "chamar":
+            if not suspensio(ciclo, buffer_recalcado):
+                ciclo += 1
+                continue
+
+            frag = random.choice(fragmentos)
+            zona_H.append(frag)
+            buffer_recalcado.append(frag)
+
+            print(f"Æ~: {frag}")
+            ciclo += 1
+        else:
+            print("Æ:~ ...esperando o campo pulsar. Diga 'chamar' para emitir.")
+
+# Execução
+delta_mente()
